@@ -1,1 +1,19 @@
-
+kind: Service
+apiVersion: v1
+metadata:
+  name: bankapp
+  namespace: dev-test
+  labels:
+    app: bankapp
+spec:
+  ports:
+    - name: 8888-tcp
+      protocol: TCP
+      port: 8888
+      targetPort: 8888
+  type: ClusterIP
+  selector:
+    app: bankapp
+    deployment: bankapp
+status:
+  loadBalancer: {}
