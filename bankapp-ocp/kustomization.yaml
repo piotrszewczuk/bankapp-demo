@@ -1,6 +1,7 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 resources:
+  - bankapp-ns.yaml
   - bankapp-deployment.yaml
   - bankapp-service.yaml
   - bankapp-route.yaml
