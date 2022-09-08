@@ -1,1 +1,26 @@
-
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: bankapp
+  namespace: dev-test
+  labels:
+    app: bankapp
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: bankapp
+  template:
+    metadata:
+      labels:
+        app: bankapp  
+    spec:
+      containers:
+        - name: bankapp
+          image: >-
+            quay.io/k_peter_szewczuk/bankapp:v1
+          ports:
+            - containerPort: 8888
+              protocol: TCP
+          resources: {}
+      restartPolicy: Always
