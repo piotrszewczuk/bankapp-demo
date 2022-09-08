@@ -15,5 +15,3 @@ spec:
   selector:
     app: bankapp
     deployment: bankapp
-status:
-  loadBalancer: {}
