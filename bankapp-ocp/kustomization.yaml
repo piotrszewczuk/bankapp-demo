@@ -4,4 +4,3 @@ resources:
   - bankapp-deployment.yaml
   - bankapp-service.yaml
   - bankapp-route.yaml
-#  - bankapp-ingress.yaml
